@@ -1,0 +1,39 @@
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Even_fibo_num {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for(int a0 = 0; a0 < t; a0++){
+            long n = in.nextLong();
+            long first=1;
+            long second=1;
+            long fibosum=0,sum=0;
+            for(long i=1;i<=n;i++)
+                {
+                  sum=first+second;
+                 if(sum<n)
+                   { 
+                       first=second;
+                       second=sum;
+                       if(sum%2==0)
+                      {
+                      fibosum+=sum;
+                     }
+                }
+                else break;
+                 
+                }
+          System.out.println(fibosum);
+           
+     
+        }
+    }
+}
