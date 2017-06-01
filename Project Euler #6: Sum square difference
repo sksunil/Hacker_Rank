@@ -1,0 +1,27 @@
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Sum_sqr_diff{
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        long t = in.nextLong();
+        for(int a0 = 0; a0 < t; a0++){
+           long n = in.nextLong();
+           long  sum1=0,sum2=0,total=0;
+            for(long i=1;i<=n;i++)
+            {
+               sum1=sum1+i;
+               sum2=sum2+(long)(Math.pow(i,2));
+            }
+        
+        sum1=(long)Math.pow(sum1,2);
+        total=sum1-sum2;
+        System.out.println(total);
+        }
+    }
+}
